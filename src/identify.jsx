@@ -1,34 +1,33 @@
 import { useEffect, useState } from "react";
 import { Phone, BadgeCheck, Download, X } from "lucide-react";
 
-import img1 from "./assets/img1.jpg";
-import img2 from "./assets/img2.jpg";
-import img3 from "./assets/img3.jpg";
-import img4 from "./assets/img4.jpg";
-import img5 from "./assets/img5.jpg";
-import img6 from "./assets/img6.jpg";
-import img7 from "./assets/img7.jpg";
-import img8 from "./assets/img8.jpg";
-import img9 from "./assets/img9.jpg";
-import img10 from "./assets/img10.jpg";
-import img11 from "./assets/img11.jpg";
-import img12 from "./assets/img12.jpg";
-import img13 from "./assets/img13.jpg";
-import img14 from "./assets/img14.jpg";
-import img15 from "./assets/img15.jpg";
-import img16 from "./assets/img16.jpg";
-import img17 from "./assets/img17.jpg";
-import img18 from "./assets/img18.jpg";
-import img19 from "./assets/img19.jpg";
-import img20 from "./assets/img20.jpg";
-import img21 from "./assets/img21.jpg";
-import img22 from "./assets/img22.jpg";
-import img23 from "./assets/img23.jpg";
-import img24 from "./assets/img24.jpg";
-import img25 from "./assets/img25.jpg";
-import img26 from "./assets/img26.jpg";
-import img27 from "./assets/img27.jpg";
-
+import img1 from "./assets/img1.webp";
+import img2 from "./assets/img2.webp";
+import img3 from "./assets/img3.webp";
+import img4 from "./assets/img4.webp";
+import img5 from "./assets/img5.webp";
+import img6 from "./assets/img6.webp";
+import img7 from "./assets/img7.webp";
+import img8 from "./assets/img8.webp";
+import img9 from "./assets/img9.webp";
+import img10 from "./assets/img10.webp";
+import img11 from "./assets/img11.webp";
+import img12 from "./assets/img12.webp";
+import img13 from "./assets/img13.webp";
+import img14 from "./assets/img14.webp";
+import img15 from "./assets/img15.webp";
+import img16 from "./assets/img16.webp";
+import img17 from "./assets/img17.webp";
+import img18 from "./assets/img18.webp";
+import img19 from "./assets/img19.webp";
+import img20 from "./assets/img20.webp";
+import img21 from "./assets/img21.webp";
+import img22 from "./assets/img22.webp";
+import img23 from "./assets/img23.webp";
+import img24 from "./assets/img24.webp";
+import img25 from "./assets/img25.webp";
+import img26 from "./assets/img26.webp";
+import img27 from "./assets/img27.webp";
 
 const users = [
   { id: 1, name: "Mohamed Aweys", image: img1, phone: "+252 61 3511576" },
@@ -65,9 +64,9 @@ function Identify() {
   const [checkedUsers, setCheckedUsers] = useState([]);
 
   useEffect(() => {
-    users.slice(0, 10).forEach((user) => {
-      const img = new Image();
-      img.src = user.image;
+    users.slice(0, 12).forEach((user) => {
+      const image = new Image();
+      image.src = user.image;
     });
   }, []);
 
@@ -79,7 +78,7 @@ function Identify() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-200 via-white to-white">
-      <div className="sticky top-0 z-30 backdrop-blur-xl bg-white/75 border-b border-sky-100">
+      <div className="sticky top-0 z-30 backdrop-blur-xl bg-white/80 border-b border-sky-100">
         <div className="max-w-7xl mx-auto px-4 py-5 text-center">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-900">
             Abdimahad's registered users and merchants
@@ -131,8 +130,8 @@ function Identify() {
                   <img
                     src={user.image}
                     alt={user.name}
-                    loading={index < 10 ? "eager" : "lazy"}
-                    fetchPriority={index < 5 ? "high" : "auto"}
+                    loading={index < 12 ? "eager" : "lazy"}
+                    fetchPriority={index < 6 ? "high" : "auto"}
                     decoding="async"
                     width="400"
                     height="320"
@@ -203,7 +202,7 @@ function Identify() {
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <a
                   href={selectedUser.image}
-                  download
+                  download={`${selectedUser.name}.webp`}
                   className="flex-1 inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white px-5 py-3 rounded-2xl font-semibold transition"
                 >
                   <Download size={18} />
