@@ -27,6 +27,8 @@ import img23 from "./assets/img23.jpg";
 import img24 from "./assets/img24.jpg";
 import img25 from "./assets/img25.jpg";
 import img26 from "./assets/img26.jpg";
+import img27 from "./assets/img27.jpg";
+
 
 const users = [
   { id: 1, name: "Mohamed Aweys", image: img1, phone: "+252 61 3511576" },
@@ -55,6 +57,7 @@ const users = [
   { id: 24, name: "Abdinur Hassan Jimale", image: img24, phone: "61 2660036" },
   { id: 25, name: "Koos", image: img25, phone: "252615335481" },
   { id: 26, name: "Abdinur", image: img26, phone: "252615335481" },
+  { id: 27, name: "Abdirahman Abdi Ali", image: img27, phone: "61 3847425" },
 ];
 
 function Identify() {
