@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Phone, BadgeCheck, Download, X } from "lucide-react";
 
 import img1 from "./assets/img1.jpg";
@@ -61,6 +61,13 @@ function Identify() {
   const [selectedUser, setSelectedUser] = useState(null);
   const [checkedUsers, setCheckedUsers] = useState([]);
 
+  useEffect(() => {
+    users.slice(0, 10).forEach((user) => {
+      const img = new Image();
+      img.src = user.image;
+    });
+  }, []);
+
   const toggleChecked = (id) => {
     setCheckedUsers((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
@@ -116,11 +123,16 @@ function Identify() {
 
                 <div
                   onClick={() => setSelectedUser(user)}
-                  className="cursor-pointer overflow-hidden"
+                  className="cursor-pointer overflow-hidden bg-gray-100"
                 >
                   <img
                     src={user.image}
                     alt={user.name}
+                    loading={index < 10 ? "eager" : "lazy"}
+                    fetchPriority={index < 5 ? "high" : "auto"}
+                    decoding="async"
+                    width="400"
+                    height="320"
                     className="w-full h-72 sm:h-64 md:h-60 object-cover transition duration-300 hover:scale-105"
                   />
                 </div>
@@ -168,6 +180,9 @@ function Identify() {
               <img
                 src={selectedUser.image}
                 alt={selectedUser.name}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full max-h-[75vh] object-contain"
               />
             </div>
