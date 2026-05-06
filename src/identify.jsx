@@ -54,7 +54,7 @@ const users = [
   { id: 23, name: "Abdullahi Mohamud Ahmed", image: img23, phone: "+252 61 9818075" },
   { id: 24, name: "Abdinur Hassan Jimale", image: img24, phone: "61 2660036" },
   { id: 25, name: "Koos", image: img25, phone: "252615335481" },
-  { id: 26, name: "Koos", image: img26, phone: "252615335481" },
+  { id: 26, name: "Abdinur", image: img26, phone: "252615335481" },
 ];
 
 function Identify() {
