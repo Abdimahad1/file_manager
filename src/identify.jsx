@@ -18,7 +18,6 @@ import img15 from "./assets/img15.webp";
 import img16 from "./assets/img16.webp";
 import img17 from "./assets/img17.webp";
 import img18 from "./assets/img18.webp";
-import img19 from "./assets/img19.webp";
 import img20 from "./assets/img20.webp";
 import img21 from "./assets/img21.webp";
 import img22 from "./assets/img22.webp";
@@ -46,7 +45,6 @@ const users = [
   { id: 16, name: "5 Class", image: img16, phone: "614753636" },
   { id: 17, name: "Mahad Ahmed Elmi", image: img17, phone: "+252 62 8222975" },
   { id: 18, name: "Abdullahi Mohamed Nur", image: img18, phone: "+252 61 8949101" },
-  { id: 19, name: "Slah Mohamed Abdullahi", image: img19, phone: "+252 61 8518797" },
   { id: 20, name: "Mohamud Abdirahman Abdulle", image: img20, phone: "614698048" },
   { id: 21, name: "Abdifitah Mohamed Hirey", image: img21, phone: "+252 61 1696932" },
   { id: 22, name: "Awale Adan Awale", image: img22, phone: "+252 61 3040873" },
