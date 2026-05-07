@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Phone, BadgeCheck, Download, X } from "lucide-react";
 
 import img1 from "./assets/img1.webp";
-import img2 from "./assets/img2.webp";
 import img3 from "./assets/img3.webp";
 import img4 from "./assets/img4.webp";
 import img5 from "./assets/img5.webp";
@@ -31,7 +30,6 @@ import img27 from "./assets/img27.webp";
 
 const users = [
   { id: 1, name: "Mohamed Aweys", image: img1, phone: "+252 61 3511576" },
-  { id: 2, name: "Ahmed Mohamud Ahmed", image: img2, phone: "613719785" },
   { id: 3, name: "Mohamed Warsame Mohamed", image: img3, phone: "+252 61 5724741" },
   { id: 4, name: "Mohamed Said Moalin", image: img4, phone: "771784850" },
   { id: 5, name: "Sharifuddin Hussein Mohamed", image: img5, phone: "0612525150" },
